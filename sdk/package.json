@@ -1,5 +1,5 @@
 {
-  "name": "your-meeting-sdk",
+  "name": "meetly-sdk",
   "version": "0.1.0",
   "description": "Drop-in video meeting components for React",
   "type": "module",

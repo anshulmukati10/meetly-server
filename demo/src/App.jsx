@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getSocket, MeetingRoom } from "your-meeting-sdk";
+import { getSocket, MeetingRoom } from "meetly-sdk";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
