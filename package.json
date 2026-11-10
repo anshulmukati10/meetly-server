@@ -1,0 +1,15 @@
+{
+  "name": "meetly",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix sdk install && npm --prefix demo install",
+    "predev": "npm --prefix sdk run build",
+    "dev": "concurrently -k -n server,sdk,demo -c green,yellow,cyan \"npm --prefix server run dev\" \"npm --prefix sdk run dev\" \"npm --prefix demo run dev\"",
+    "build": "npm --prefix sdk run build && npm --prefix demo run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

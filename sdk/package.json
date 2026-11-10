@@ -1,0 +1,50 @@
+{
+  "name": "your-meeting-sdk",
+  "version": "0.1.0",
+  "description": "Drop-in video meeting components for React",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "webrtc",
+    "video",
+    "meeting",
+    "react",
+    "sdk"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "meetly": "file:..",
+    "react-icons": "^5.7.0",
+    "socket.io-client": "^4.8.4"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsup": "^8.3.0",
+    "typescript": "^7.0.2"
+  }
+}

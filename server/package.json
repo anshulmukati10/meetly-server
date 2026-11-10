@@ -1,0 +1,21 @@
+{
+  "name": "meetly-server",
+  "version": "1.0.0",
+  "description": "Signaling server for the meeting SDK",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --env-file=.env --watch index.js"
+  },
+  "engines": {
+    "node": ">=20.6"
+  },
+  "dependencies": {
+    "meetly": "file:..",
+    "socket.io": "^4.8.4"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "author": ""
+}
