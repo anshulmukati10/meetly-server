@@ -6,6 +6,7 @@ export function useWebRTC(
   meetingId,
   name = "Guest",
   serverUrl = DEFAULT_SERVER_URL,
+  iceServers = DEFAULT_ICE_SERVERS,
 ) {
   const socket = getSocket(serverUrl);
   const [localStream, setLocalStream] = useState(null);

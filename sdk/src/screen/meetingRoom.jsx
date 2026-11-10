@@ -151,7 +151,7 @@ export default function MeetingRoom({
   ];
 
   return (
-    <main className="meeting-room">
+    <main className="mt-root meeting-room">
       <header className="meeting-room-header">
         <div className="meeting-room-title">
           <strong>{meetingName}</strong>

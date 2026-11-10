@@ -85,10 +85,18 @@ export default function App() {
 }
 
 const styles = {
-  page: { height: "100%", display: "grid", placeItems: "center" },
+  page: {
+    width: "100%",
+    minHeight: "100vh",
+    display: "grid",
+    placeItems: "center",
+    background: "#0b0b0f",
+    color: "#fff",
+    boxSizing: "border-box",
+  },
   card: {
     display: "flex", flexDirection: "column", gap: 12, width: 320,
-    padding: 24, background: "#17171f", borderRadius: 12,
+    padding: 24, background: "#17171f", color: "#fff", borderRadius: 12,
   },
   input: {
     padding: "10px 12px", borderRadius: 8, border: "1px solid #333",

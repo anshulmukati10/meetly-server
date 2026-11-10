@@ -58,12 +58,12 @@ if (
   );
 }
 
-export default defineConfig({
+export default defineConfig((options) => ({
   entry: ["src/index.js"],
   format: ["esm", "cjs"],
   external: ["react", "react-dom", "react/jsx-runtime"],
   injectStyle: true,       
-  clean: true,
+  clean: !options.watch,
   sourcemap: true,
   minify: false,
   define: {
@@ -74,4 +74,4 @@ export default defineConfig({
     options.jsx = "automatic";
     options.loader = { ...options.loader, ".js": "jsx" }; 
   },
-});
+}));

@@ -2,10 +2,11 @@ import { useState } from "react";
 import { FiArrowRight, FiVideo } from "react-icons/fi";
 import { getSocket } from "../feature/meetingSocket.js";
 import MeetingRoom from "./meetingRoom.jsx";
-import { DEFAULT_SERVER_URL } from "../config.js";
+import { DEFAULT_ICE_SERVERS, DEFAULT_SERVER_URL } from "../config.js";
 
 export default function MeetingLobby({
   serverUrl = DEFAULT_SERVER_URL,
+  iceServers = DEFAULT_ICE_SERVERS,
   name: initialName = "Guest",
 }) {
   const [name, setName] = useState(initialName);
@@ -59,7 +60,7 @@ export default function MeetingLobby({
   }
 
   return (
-    <div className="meeting-lobby">
+    <div className="mt-root meeting-lobby">
       {error && <div className="meeting-alert" role="alert">{error}</div>}
       <section className="meeting-welcome">
         <div className="meeting-welcome-copy">
